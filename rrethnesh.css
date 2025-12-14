@@ -75,4 +75,49 @@ footer {
     padding: 1rem;
     border-radius: 5px;
     color: #2933a9;
+}@media (max-width: 768px) {
+    .navbar ul {
+        gap: 0.5rem;
+        font-size: 0.8rem;
+    }
+    
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .products h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0.5rem;
+    }
+    
+    .logo {
+        font-size: 1.3rem;
+    }
+    
+    .navbar ul {
+        gap: 0.3rem;
+        flex-wrap: wrap;
+    }
+    
+    .navbar a {
+        font-size: 0.75rem;
+        padding: 0.3rem;
+    }
+    
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+    
+    .products h2 {
+        font-size: 1.5rem;
+    }
 }
