@@ -5,6 +5,7 @@
 
 body {
     font-family: Arial, sans-serif;
+    line-height: 1.5;
     background: #f2f2f2;
 }
 
@@ -114,6 +115,10 @@ p {
 
 .btn:hover {
     background: #0a6dd8;
+}
+
+footer p {
+    color: white;
 }
 
 footer {
