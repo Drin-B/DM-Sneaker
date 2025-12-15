@@ -26,6 +26,14 @@ header {
 .logo {
     font-size: 2rem;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
 }
 
 .navbar ul {
@@ -45,7 +53,7 @@ header {
     url("50%.png") center/cover no-repeat;
     color: white;
     text-align: center;
-    padding: 3rem 1rem;
+    padding: 7rem 1rem;
 }
 
 .btn {
