@@ -67,7 +67,9 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     }
     
-    
+    .products h2 {
+        font-size: 2rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -93,8 +95,16 @@ footer {
         grid-template-columns: 1fr;
     }
     
-  
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+    
+    .products h2 {
+        font-size: 1.5rem;
+    }
 }
+    
+
 main {
     min-height: 100vh;
 

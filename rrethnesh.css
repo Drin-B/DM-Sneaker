@@ -77,13 +77,15 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
 }
-
-.features li {
-    background: #f5f5f5;
-    padding: 1rem;
-    border-radius: 5px;
-    color: #2933a9;
-}@media (max-width: 768px) {
+.hero {
+    background:
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    url("50%.png") center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 7rem 1rem;
+}
+@media (max-width: 768px) {
     .navbar ul {
         gap: 0.5rem;
         font-size: 0.8rem;
