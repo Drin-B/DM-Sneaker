@@ -1,0 +1,137 @@
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background: #f9f9f9;
+}
+
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 1rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+
+main {
+    min-height: 100vh;
+    background: linear-gradient(120deg, #2d48c2, #2c3e50);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.container {
+    max-width: 400px;
+    width: 90%;
+}
+
+.form-box {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    padding: 10px;
+}
+
+.button-box {
+    width: 220px;
+    margin: 25px auto;
+    display: flex;
+    position: relative;
+    border-radius: 30px;
+}
+
+#btn-indicator {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: #2e6ee6;
+    border-radius: 30px;
+    left: 0;
+    transition: 0.5s;
+}
+
+.toggle-btn {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#registerForm {
+    display: none;
+}
+
+.input-field {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    margin-top: 10px;
+    padding: 12px;
+    background: #1e3c72;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.error-msg {
+    color: red;
+    font-size: 13px;
+}
