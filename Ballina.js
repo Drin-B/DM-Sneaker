@@ -7,3 +7,7 @@ for(var i = 0; i < butonat.length; i++) {
         alert('U shtua! Total: ' + numri);
     }
 }
+
+function scrollToTop() {
+    window.scrollTo(0, 0);
+}
