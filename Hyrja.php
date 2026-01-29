@@ -16,11 +16,11 @@
                 <img src="DM.png" alt="Logo"> 
             </div>
             <ul>
-                <li><a href="Ballina.html">Ballina</a></li>
-                <li><a href="Produktett.html">Produktet</a></li>
-                <li><a href="rrethnesh.html">Rreth Nesh</a></li>
-                 <li><a href="Kontakti.html">Kontakti</a></li>
-                <li><a href="Hyrja.html">Hyrja</a></li>
+                <li><a href="Ballina.php">Ballina</a></li>
+                <li><a href="Produktett.php">Produktet</a></li>
+                <li><a href="rrethnesh.php">Rreth Nesh</a></li>
+                 <li><a href="Kontakti.php">Kontakti</a></li>
+                <li><a href="Hyrja.php">Hyrja</a></li>
             </ul>
         </nav>
     </header>
