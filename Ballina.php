@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['user_id'])) {
+    header("Location: Hyrja.php"); // Redirect to login if not logged in
+    exit;
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="sq">
 <head>

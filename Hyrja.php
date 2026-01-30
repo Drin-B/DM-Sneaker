@@ -1,3 +1,49 @@
+<?php
+include_once 'database.php';
+include_once 'user.php';
+
+if(isset($_POST['register'])){
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $db = new Database();
+        $connection = $db->getConnection();
+        $user = new User($connection);
+
+        // Get form data
+        $name = $_POST['namer'];
+        $email = $_POST['emailr'];
+        $password = $_POST['passwordr'];
+
+        // Register the user
+        if ($user->register($name, $email, $password)) {
+            header("Location: login.php"); // Redirect to login page
+            exit;
+        } else {
+            echo "Error registering user!";
+        }
+    }
+}
+
+if(isset($_POST['login'])){
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $db = new Database();
+        $connection = $db->getConnection();
+        $user = new User($connection);
+
+        // Get form data
+        $email = $_POST['emaill'];
+        $password = $_POST['passwordl'];
+
+        // Attempt to log in
+        if ($user->login($email, $password)) {
+            header("Location: Ballina.php"); // Redirect to home page
+            exit;
+        } else {
+            echo "Invalid login credentials!";
+        }
+    }
+}
+?>
+
 
 <!DOCTYPE html>
 <html lang="sq">
@@ -40,19 +86,19 @@
             </div>
 
             <form id="loginForm" class="input-group">
-                <input id="loginEmail" type="email" class="input-field" placeholder="Email" required>
-                <input id="loginPassword" type="password" class="input-field" placeholder="Password" required>
+                <input id="loginEmail" type="email" class="input-field" placeholder="Email" name="emaill" required>
+                <input id="loginPassword" type="password" class="input-field" placeholder="Password" name="passwordl" required>
                 <div id="loginError" class="error-msg"></div>
-                <button type="submit" class="submit-btn">Hyr</button>
+                <button type="submit" class="submit-btn" name="login">Hyr</button>
             </form>
 
             <form id="registerForm" class="input-group">
-                <input id="registerName" type="text" class="input-field" placeholder="Name" required>
-                <input id="registerEmail" type="email" class="input-field" placeholder="Email" required>
-                <input id="registerPassword" type="password" class="input-field" placeholder="Password" required>
+                <input id="registerName" type="text" class="input-field" placeholder="Name" name="namer" required>
+                <input id="registerEmail" type="email" class="input-field" placeholder="Email" name="emailr" required>
+                <input id="registerPassword" type="password" class="input-field" placeholder="Password" name="passwordr" required>
                 <input id="registerConfirmPassword" type="password" class="input-field" placeholder="Confirm Password" required>
                 <div id="registerError" class="error-msg"></div>
-                <button type="submit" class="submit-btn">Regjistrohu</button>
+                <button type="submit" class="submit-btn" name="register">Regjistrohu</button>
             </form>
 
         </div>
